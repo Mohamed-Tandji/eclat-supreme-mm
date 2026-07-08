@@ -17,7 +17,7 @@ export default function SectionTitle({
         {badge}
       </p>
 
-      <h2 className="mt-4 text-4xl font-black tracking-tight md:text-5xl">
+      <h2 className="mt-4 text-4xl font-black tracking-tight text-slate-900 md:text-5xl">
         {title}
       </h2>
 

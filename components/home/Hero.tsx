@@ -46,7 +46,7 @@ export default function Hero() {
 
           <div className="mt-8 flex flex-col gap-4 sm:flex-row">
             <Link
-              href="#estimation"
+              href="/estimation"
               className="inline-flex items-center justify-center gap-2 rounded-2xl bg-blue-600 px-7 py-4 text-sm font-black uppercase tracking-wide text-white shadow-lg shadow-blue-600/30 transition hover:-translate-y-1 hover:bg-blue-700"
             >
               Obtenir une estimation
@@ -54,7 +54,7 @@ export default function Hero() {
             </Link>
 
             <Link
-              href="#realisations"
+              href="/realisations"
               className="inline-flex items-center justify-center rounded-2xl border border-white/30 bg-white/5 px-7 py-4 text-sm font-black uppercase tracking-wide text-white backdrop-blur transition hover:-translate-y-1 hover:bg-white hover:text-slate-950"
             >
               Voir nos réalisations
@@ -81,19 +81,25 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="mt-8 hidden grid-cols-2 gap-5 md:grid md:grid-cols-4">
+          <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-5">
             <div>
-              <p className="text-2xl font-black text-blue-400">500+</p>
+              <p className="text-xl font-black text-blue-400 md:text-2xl">
+                500+
+              </p>
               <p className="mt-1 text-xs text-slate-300">Projets réalisés</p>
             </div>
 
             <div>
-              <p className="text-2xl font-black text-blue-400">100%</p>
+              <p className="text-xl font-black text-blue-400 md:text-2xl">
+                100%
+              </p>
               <p className="mt-1 text-xs text-slate-300">Satisfaction visée</p>
             </div>
 
             <div>
-              <p className="text-2xl font-black text-blue-400">7j/7</p>
+              <p className="text-xl font-black text-blue-400 md:text-2xl">
+                7j/7
+              </p>
               <p className="mt-1 text-xs text-slate-300">Disponibilité</p>
             </div>
 
