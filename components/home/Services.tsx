@@ -1,5 +1,9 @@
 import { Building2, Home, House, Sparkles, Trees, Wrench } from "lucide-react";
 
+import Container from "@/components/ui/Container";
+import SectionTitle from "@/components/ui/SectionTitle";
+import Card from "@/components/ui/Card";
+
 const services = [
   {
     title: "Résidentiel",
@@ -35,34 +39,22 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="bg-white px-6 py-24 text-slate-950">
-      <div className="mx-auto max-w-7xl">
-        <div className="mx-auto max-w-3xl text-center">
-          <p className="text-sm font-black uppercase tracking-[0.25em] text-blue-600">
-            Nos services
-          </p>
-
-          <h2 className="mt-4 text-4xl font-black tracking-tight md:text-5xl">
-            Des services adaptés à vos besoins
-          </h2>
-
-          <p className="mt-6 text-lg leading-8 text-slate-600">
-            Éclat Suprême MM accompagne les particuliers, les commerces et les
-            propriétaires de chalets avec un service fiable, soigné et
-            professionnel.
-          </p>
-        </div>
+    <section id="services" className="bg-white py-24 text-slate-950">
+      <Container>
+        <SectionTitle
+          badge="Nos services"
+          title="Des services adaptés à vos besoins"
+          description="Éclat Suprême MM accompagne les particuliers, les commerces et les propriétaires de chalets avec un service fiable, soigné et professionnel."
+          center
+        />
 
         <div className="mt-16 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => {
             const Icon = service.icon;
 
             return (
-              <div
-                key={service.title}
-                className="group rounded-3xl border border-slate-200 bg-white p-8 shadow-sm transition hover:-translate-y-2 hover:border-blue-200 hover:shadow-xl"
-              >
-                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-blue-600 transition group-hover:bg-blue-600 group-hover:text-white">
+              <Card key={service.title}>
+                <div className="mb-6 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-50 text-blue-600">
                   <Icon size={28} />
                 </div>
 
@@ -71,11 +63,11 @@ export default function Services() {
                 <p className="mt-4 leading-7 text-slate-600">
                   {service.description}
                 </p>
-              </div>
+              </Card>
             );
           })}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }
